@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {StyleSheet} from 'react-native';
-import {Container,Text, View, Item, H1, Form, Input, Button} from 'native-base';
+import {Container,Text, View, Item, H1, Form, Input, Button, Picker} from 'native-base';
 
 import globalStyles from '../styles/global';
 
@@ -14,18 +14,48 @@ const CrearCuenta = () => {
                    <Form>
                         <Item>
                             <Input
-                                placeholder="Nombre"                                                          
+                                placeholder="Correo"     
+                                autoCompleteType="email"                                                       
                             />                            
                        </Item>
                        <Item  >
                             <Input
-                                placeholder="Apellidos"                                                                                         
+                                placeholder="Nombre"                                                                                         
                             />                            
                        </Item>
                        <Item>
                             <Input
-                                placeholder="Correo"   
-                                autoCompleteType="email"                                                        
+                                placeholder="Apellido Paterno"   
+                                                                                      
+                            />                            
+                       </Item>
+                       <Item>
+                            <Input
+                                placeholder="Apellido Materno"                                
+                                                                                          
+                            />                            
+                       </Item>
+                       
+                             
+                        <Picker
+                            mode="dropdown"
+                        >
+                            <Picker.Item label="Masculino" value="op1"/>
+                            <Picker.Item label="Femenino" value="op2"/>
+                        </Picker>
+
+
+                       
+                       <Item>
+                            <Input
+                                placeholder="Región"                                
+                                                                                          
+                            />                            
+                       </Item>
+                       <Item>
+                            <Input
+                                placeholder="Ciudad"                                
+                                                                                          
                             />                            
                        </Item>
                        <Item>
@@ -35,15 +65,15 @@ const CrearCuenta = () => {
                             />                            
                        </Item>
                    </Form>
-                   <View style={{flexDirection: 'row'}}>
-                    <Text>Registrarse</Text>
+                   
+                   <View>                    
                     <Button
-                            square
-                            block
-                            style={globalStyles.btnCrearC}                    
+                        square
+                        block
+                        style={[globalStyles.btnLog,{marginTop: 100},{backgroundColor:"#FBBF00"}]}
                     >
-                        <Text style={{fontSize: 30}}>></Text>
-                    </Button>
+                    <Text style={{color:"white"}}>Iniciar Sesión</Text>
+                     </Button>
                    </View>
                    
                 </View>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {StyleSheet, View, Image} from 'react-native';
 
-import {Container, Text, Button } from 'native-base'
+import {Container, Text, Button, H1, Input, Form, Item, Toast } from 'native-base'
 
 import globalStyles from '../styles/global';
 
@@ -9,30 +9,40 @@ import globalStyles from '../styles/global';
 const Login = () => {
     return ( 
         <>
-          <Container style={{backgroundColor: '#FBBB34'}}>
+          <Container>
             <View style={globalStyles.contenido}>
+
+                <Text style={globalStyles.subtitulo}>Iniciar Sesión</Text> 
+
 
                 <View style={styles.con}>
                     <Image style={styles.img} source={require('../assets/img/logoBee.png')}/>
                 </View>
-                <Text style={globalStyles.titulo}>B e e b i k e l l</Text>  
 
+                <Form>
+                    <Item inlineLabel last>
+                        <Input
+                            placeholder="Correo"                
+                            autoCompleteType="email"
+                        />
+                    </Item>
+                    
+                    <Item inlineLabel last>
+                        <Input
+                            placeholder="Contraseña"
+                            secureTextEntry={true}                
+                        />
+                    </Item>
+                </Form>
+                 
                 <Button
                     square
                     block
-                    style={[globalStyles.btnLog,{marginTop: 100}]}
+                    style={[styles.btn,{marginTop: 100}]}
                 >
-                    <Text style={globalStyles.textoLogin}>Registrarse</Text>
+                    <Text style={{color:"white"}}>Iniciar Sesión</Text>
                 </Button>
-
-                <Button
-                    square
-                    block
-                    style={[globalStyles.btnLog,{marginTop: 20}]}
-                >
-                    <Text style={globalStyles.textoLogin2}>Inicar Sesion</Text>
-                </Button>
-
+                
             </View>              
           </Container>
         </>
@@ -44,11 +54,14 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     img:{                        
-        height: 300,
-        width: 300,
+        height: 100,
+        width: 100,
         marginBottom: 10        
     },
-
+    btn:{
+        backgroundColor: '#FBBF00',
+        borderRadius: 20
+    },    
 
 });
 

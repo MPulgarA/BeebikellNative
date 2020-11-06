@@ -38,8 +38,9 @@ const Inicio = () => {
                     square
                     block
                     style={[globalStyles.btnLog,{marginTop: 20}]}
+                    onPress={() => navigation.navigate("Login")}
                 >
-                    <Text style={globalStyles.textoLogin2}>Inicar Sesion</Text>
+                    <Text style={globalStyles.textoLogin2}>Iniciar Sesion</Text>
                 </Button>
 
             </View>              
