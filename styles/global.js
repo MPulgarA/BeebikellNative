@@ -8,7 +8,8 @@ const globalStyles = StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'center', 
         marginHorizontal: '2.5%',
-        flex: 1    
+        flex: 1,
+        
     },
     titulo:{
         textAlign: 'center',
@@ -19,10 +20,15 @@ const globalStyles = StyleSheet.create({
         paddingTop: 20,                     
         fontSize: 48,
         fontFamily:'Roboto-Bold',
-        textTransform: 'uppercase'
+        textTransform: 'uppercase',
+        justifyContent: 'flex-start',
     },
     btnLog:{
         backgroundColor: '#FFF',
+        borderRadius: 20
+    },
+    btnLog2:{
+        backgroundColor: '#FBBF00',
         borderRadius: 20
     },
     btnCrearC:{

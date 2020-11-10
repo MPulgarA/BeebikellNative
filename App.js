@@ -10,10 +10,14 @@ const Stack = createStackNavigator();
 import Inicio from "./views/Inicio"
 import Login from "./views/Login"
 import CrearCuenta from './views/CrearCuenta';
+import Home from './views/Home';
+
+import { Root } from 'native-base';
 
 const App = () => {
   return (
     <>
+    <Root>
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Inicio">
 
@@ -44,10 +48,19 @@ const App = () => {
             }}          
           />
 
+          <Stack.Screen
+            name="Home"
+            component={Home}
+            options={{
+              title:"Home",
+              headerShown: false
+            }}          
+          />
           
       
         </Stack.Navigator>
       </NavigationContainer>
+      </Root>
     </>
   );
 };
