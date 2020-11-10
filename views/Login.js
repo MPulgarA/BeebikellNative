@@ -10,6 +10,9 @@ import AsyncStorage from '@react-native-community/async-storage';
 import {gql, useMutation} from '@apollo/client';
 
 
+
+
+
 //Mutation
 const AUTENTICAR_USUARIO = gql`
     mutation autenticarUsuario($input: AutenticarInput){
@@ -29,6 +32,8 @@ const Login = () => {
     const [mensaje, guardarMensaje] = useState(null);
 
     const navigation = useNavigation();
+
+  
 
     //Mutation Apollo
     const [autenticarUsuario] = useMutation(AUTENTICAR_USUARIO);
@@ -51,13 +56,16 @@ const Login = () => {
                 }
             });
 
+            console.log(data)
             const {token} = data.autenticarUsuario;
+            
+            console.log(token);
 
             //Guardar el token en el storage
             await AsyncStorage.setItem('token', token);
 
             //Ir a home
-            navigation.navigate("Home");
+            navigation.navigate("Home", {screen: 'Home'});
                         
         } catch (error) {
             console.log(error)
