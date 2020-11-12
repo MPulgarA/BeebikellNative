@@ -1,9 +1,10 @@
 import React from 'react';
 import {StyleSheet, Image} from 'react-native';
-import {Icon, Container, Button, Text, Toast, View, Card, CardItem, Body, Left, Thumbnail, Right, Row} from 'native-base';
+import { Container, Button, Text, Toast, View, Card, CardItem, Body, Left, Thumbnail, Right, Row} from 'native-base';
 
 import globalStyles from '../styles/global';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+
 
 
 const Home = () => {    
@@ -122,6 +123,7 @@ const Home = () => {
                        >
                            <Text>Nueva Smartband</Text>
                        </Button>
+                       
 
                    </View>
 
