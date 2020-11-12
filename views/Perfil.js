@@ -1,7 +1,6 @@
 import React from 'react';
-import {View} from 'react-native';
 
-import {Container, Text} from 'native-base';
+import {Container, Text, View} from 'native-base';
 
 import globalStyles from '../styles/global';
 

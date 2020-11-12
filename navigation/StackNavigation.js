@@ -6,7 +6,7 @@ import Login from "../views/Login"
 import CrearCuenta from '../views/CrearCuenta';
 
 
-import TabNavigator from './tabNavigation';
+import TabNavigator from './TabNavigation';
 
 
 const Stack = createStackNavigator();

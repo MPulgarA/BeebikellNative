@@ -2,7 +2,8 @@ import {StyleSheet} from 'react-native';
 
 const globalStyles = StyleSheet.create({
     contenedor:{
-        flex:1
+        flex:1,
+        backgroundColor: '#F0F0F0'
     },
     contenido: {
         flexDirection: 'column',
